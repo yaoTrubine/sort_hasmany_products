@@ -1,0 +1,14 @@
+<%#在线订单%>
+<div class="company_container">
+    <div class="company_title">
+        <h2>在线订单</h2>
+    </div>
+    <div class="company_content">
+       <%= simple_form_for(@order) do |f| %>
+            <%= f.input :name, label: "姓名" %>
+            <%= f.input :email, label: "email" %>
+            <%= f.input :content, label: "留言内容" %>
+            <%= f.submit %>
+        <% end %>
+    </div>
+</div>

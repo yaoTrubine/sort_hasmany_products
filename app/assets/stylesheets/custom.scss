@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body{margin: 0;padding: 0;}
+.clr:after {content: " ";display: block;height: 0;clear: both;}
+ul,li {list-style: none;margin: 0;padding: 0;}
+.company_container a {color: #fff;font-size: 18px;display: block;text-decoration: none;}
+.col-2,.col-5 {display: block;position: relative;float: left;min-height: 1px;}
+.col-2 {width: 25%;}
+.col-5 {width: 50%;}
+.col-8 {width: 80%;}
+#nav {background:#2E64FE;width:100%;text-align: center;height: 45px;line-height: 45px;font-size: 23px;position: relative;overflow:hidden;}
+#logo {line-height: 50px;font-size: 30px;}
+.company_title { border-bottom: 1.5px dotted #000;padding: 10px 0 10px 15px;}
+.company_title h2 {font-weight: bolder;}
+.header{height: 50px;}
+.company_content {margin-top: 30px;padding: 0 15px 30px 15px;}
+.company_content li {height: 70px;background: #E6E6E6;list-style:disc;line-height: 70px;padding-left: 30px;}
+.company_content li a {color: #000;font-weight: bolder;}
+#box1 a{color: #2E64FE;}
+
+.product_content {margin-top: 40px;}
+.product_content li {height: 70px;background: #E6E6E6;list-style:disc;line-height: 70px;padding-left: 30px;}
+.product_content li a {color: #000;font-weight: bolder;}
+
+// product page
+.show_product_container { border-bottom: 1.5px dotted #000;}
+.product_title {text-align: center;padding: 10px 0 10px 0;border-bottom: 1.5px dotted #000;}
+.product_intro {padding-top: 30px;}
+.product_number {padding: 30px 0 30px 0;}
+
+// admin
+
+#sider {float: left;}
+.admin_container {width: 180px;height: 1200px;background: #424242;padding: 20px 0 0 10px;}
+.admin_container li {height: 60px;line-height: 60px;}
+.admin_container a {color: #fff;font-size: 20px;}
+
+.order_container {float: left;width: 1000px;}
+.admin_order_content {margin-top: 60px;padding-left: 50px;}
+.product_container {float: left;width: 900px;}
+.order_container .title {padding-left: 20px;}
+.product_container .title {padding-left: 20px;}
+.form_product_content{margin-top: 60px;padding-left: 50px;}
+.table td:nth-child(1) {width: 100px;}
+.table td:nth-child(3) {width: 600px;}
+
+textarea {resize: none;}

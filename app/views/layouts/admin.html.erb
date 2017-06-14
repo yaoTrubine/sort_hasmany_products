@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AkarNew</title>
+        <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+
+    <body>
+        <%= render 'layouts/sider' %>
+        <%= notice %>
+        <%= yield %>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<%#订单处理%>
+<div class="order_container">
+    <div class="title">
+        <h1>所有订单</h1>
+    </div>
+    <div class="admin_order_content">
+        <table class="table">
+            <thead>
+            <tr>
+                <td><b>姓名</b></td>
+                <td><b>邮箱</b></td>
+                <td><b>留言内容</b></td>
+                <td><b>操作</b></td>
+            </tr>
+            </thead>
+           <tbody>
+            <% @orders.each do |order| %>
+            <tr>
+                <td><%= order.name %></td>
+                <td><%= order.email %></td>
+                <td><%= order.content %></td>
+                <td>
+                    <%= link_to "编辑", edit_order_path(order) %>
+                    <%= link_to "删除", order_path(order), method: "delete", data: { confirm: "确认删除" } %>
+                </td>
+            </tr>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

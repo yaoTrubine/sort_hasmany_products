@@ -1,0 +1,12 @@
+<%#添加分类%>
+<div class="product_container clr">
+    <div class="title">
+        <h1>添加分类</h1>
+    </div>
+    <div class="form_product_content">
+        <%= simple_form_for(@sort) do |f| %>
+            <%= f.input :name, label: "分类" %>
+            <%= f.submit %>
+        <% end %>
+    </div>
+</div>
