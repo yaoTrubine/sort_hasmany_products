@@ -5,7 +5,7 @@
     <div class="product_content">
         <ul>
             <% @sorts.each do |sort|%>
-                <li><%= link_to sort.name, "#" %></li>
+                <li><%= link_to sort.name, sort_products_path(sort) %></li>
             <% end %>
         </ul>
     </div>

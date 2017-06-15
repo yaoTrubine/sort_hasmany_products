@@ -1,14 +1,12 @@
-
-
 <div class="company_container">
     <div class="company_title">
         <h2>产品展示</h2>
     </div>
     <div class="product_content">
         <ul class="product_list">
-            <% @products.each do |product| %>
-                <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
+        <% @sort.products.each do |product| %>
+                <li><%= link_to product.name, sort_product_path(@sort,product) %></li>
+        <% end %>
         </ul>
     </div>
 </div>

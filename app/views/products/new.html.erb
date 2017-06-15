@@ -4,7 +4,7 @@
         <h1>发布产品</h1>
     </div>
     <div class="form_product_content">
-        <%= simple_form_for(@product) do |f| %>
+        <%= simple_form_for [@sort,@product],url: {action: "create"} do |f| %>
             <%= f.input :name, label: "产品名称" %>
             <%= f.input :number, label: "编号" %>
             <%= f.submit %>
