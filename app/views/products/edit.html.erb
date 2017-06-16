@@ -1,0 +1,14 @@
+<%#编辑产品%>
+<div class="product_container clr">
+    <div class="title">
+        <h1>编辑产品</h1>
+    </div>
+    <div class="form_product_content">
+        <%= simple_form_for (@product), url: {action: "update"} do |f| %>
+            <%= f.input :name, label: "产品名称" %>
+            <%= f.input :number, label: "编号" %>
+            <%= f.submit %>
+        <% end %>
+        <%#<%= render "form" %>
+    </div>
+</div>

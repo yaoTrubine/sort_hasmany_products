@@ -25,6 +25,17 @@
                         <%= link_to "添加产品", new_sort_product_path(sort) %>
                         <%= link_to "删除分类", sort_path(sort),method: "delete", data: { confirm: "确认删除" }  %>
                     </td>
+                    <td>
+                        <% sort.products.each do |product| %>
+                            <ul>
+                                <li>
+                                  <%= product.name %>
+                                  <%= link_to "编辑", edit_sort_product_path(sort,product) %>
+                                   <%= link_to "删除", sort_product_path(sort,product), method: "delete", data: { confirm: "确认删除" }  %>
+                                </li>
+                            </ul>
+                        <% end %>
+                    </td>
                 </tr>
             <% end %>
             </tbody>
