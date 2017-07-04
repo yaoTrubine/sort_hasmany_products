@@ -2,6 +2,7 @@ class SortsController < ApplicationController
   layout "admin", only: [:new]
   def index
     @sorts = Sort.all
+    @products = Product.search(params[:search])
   end
 
   def new

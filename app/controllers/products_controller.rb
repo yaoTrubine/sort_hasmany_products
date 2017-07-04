@@ -1,9 +1,7 @@
 class ProductsController < ApplicationController
   layout "admin", only: [:new,:create,:edit]
   def index
-      @products = Product.all
       @sort = Sort.find(params[:sort_id])
-      @product = Product.find_by(id: params[:id])
   end
 
   def new

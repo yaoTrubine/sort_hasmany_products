@@ -1,12 +1,44 @@
 <div class="company_container">
     <div class="company_title">
         <h2>产品展示</h2>
+        <div>
+            <%= form_tag sorts_path, method:"get" do %>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "submit" %>
+            <% end %>
+        </div>
     </div>
+    <div class="search_result">
+        <% if params[:search].blank? %>
+        <% else %>
+        <h2>搜索结果</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>CAS NO</th>
+                </tr>
+            </thead>
+            <tbody>
+             <% @products.each do |product| %>
+                <tr>
+                    <td><%= product.name %></td>
+                    <td><%= product.number %></td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+        <% end %>
+    </div>
+
+
     <div class="product_content">
+    <h2>产品列表</h2>
         <ul>
             <% @sorts.each do |sort|%>
-                <li><%= link_to sort.name, sort_products_path(sort) %></li>
+                <li><%= link_to sort.name, sort_products_path(sort), default_order: :desc %></li>
             <% end %>
+            
         </ul>
     </div>
 </div>
